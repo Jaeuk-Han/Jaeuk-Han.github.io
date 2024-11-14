@@ -149,7 +149,7 @@ sns.countplot(data=train_df, x='Transported', ax=ax[1])
 plt.show()
 ```
 
-![Transported_img](../assets/img/for_post/Space_Titanic/transported.png)
+![Transported_img](/assets/img/for_post/Space_Titanic/transported.png)
 &nbsp;
 
 항해 중 다른 차원으로 이동 된 사람들과 그렇지 않은 사람들의 비율이 비슷하다는 것을 확인 가능
@@ -162,13 +162,13 @@ sns.countplot(data=train_df, x='HomePlanet', hue='Transported', ax=ax)
  
 plt.show()
 ```
-![homeplanet_img](../assets/img/for_post/Space_Titanic/homeplanet.png)
+![homeplanet_img](/assets/img/for_post/Space_Titanic/homeplanet.png)
 &nbsp;
 
 ```py
 train_df[['HomePlanet', 'Transported']].groupby(['HomePlanet'], as_index=False).mean().sort_values(by='Transported', ascending=False)
 ```
-![homeplanet2_img](../assets/img/for_post/Space_Titanic/homeplanet2.png)
+![homeplanet2_img](/assets/img/for_post/Space_Titanic/homeplanet2.png)
 &nbsp;
 
 지구, 유로파, 화성 순으로 탑승 승객이 많으며,  지구에서 탑승한 승객들이 다른 두 행성에서 탑승한 승객들보다 이동 확률이 낮음을 확인 가능함.
@@ -181,7 +181,7 @@ sns.countplot(data=train_df, x='CryoSleep', hue='Transported', ax=ax)
  
 plt.show()
 ```
-![cryosleep_img](../assets/img/for_post/Space_Titanic/cryosleep.png)
+![cryosleep_img](/assets/img/for_post/Space_Titanic/cryosleep.png)
 &nbsp;
 `CryoSleep`의 경우 동면 중인 승객들이 그렇지 않은 승객들에 비해 유의미하게 이동 확률이 높은 것을 확인 가능함. 
 
@@ -193,13 +193,13 @@ sns.countplot(data=train_df, x='Deck', hue='Transported', ax=ax)
  
 plt.show()
 ```
-![deck_img](../assets/img/for_post/Space_Titanic/deck.png)
+![deck_img](/assets/img/for_post/Space_Titanic/deck.png)
 &nbsp;
 
 ```py
 train_df[['Deck', 'Transported']].groupby(['Deck'], as_index=False).mean().sort_values(by='Transported', ascending=False)
 ```
-![deck2_img](../assets/img/for_post/Space_Titanic/deck2.png)
+![deck2_img](/assets/img/for_post/Space_Titanic/deck2.png)
 &nbsp;
 
 각 `Cabin`에서 승객이 제대로 도착한 비율을 구해보면 다음과 같음. 객실 B와 C의 경우 승객의 이동 확률에 유의미한 차이가 있음을 확인 가능함. 
@@ -213,13 +213,13 @@ sns.countplot(data=train_df, x='Side', hue='Transported', ax=ax)
  
 plt.show()
 ```
-![side_img](../assets/img/for_post/Space_Titanic/side.png)
+![side_img](/assets/img/for_post/Space_Titanic/side.png)
 &nbsp;
 
 ```py
 train_df[['Side', 'Transported']].groupby(['Side'], as_index=False).mean().sort_values(by='Transported', ascending=False)
 ```
-![side2_img](../assets/img/for_post/Space_Titanic/side2.png)
+![side2_img](/assets/img/for_post/Space_Titanic/side2.png)
 &nbsp;
 
 `Side`의 경우 우현(S)에 앉은 승객들이 좌현(P)에 앉은 승객들보다 이동 확률이 높다는 것을 확인 가능함.
@@ -232,13 +232,13 @@ sns.countplot(data=train_df, x='Destination', hue='Transported', ax=ax)
  
 plt.show()
 ```
-![destination_img](../assets/img/for_post/Space_Titanic/destination.png)
+![destination_img](/assets/img/for_post/Space_Titanic/destination.png)
 &nbsp;
 
 ```py
 train_df[['Destination', 'Transported']].groupby(['Destination'], as_index=False).mean().sort_values(by='Transported', ascending=False)
 ```
-![destination2_img](../assets/img/for_post/Space_Titanic/destination2.png)
+![destination2_img](/assets/img/for_post/Space_Titanic/destination2.png)
 &nbsp;
 
 55 Cancri e가 목적지였던 승객들은 이동 확률이 높고 TRAPPIST-1e가 목적지인 승객은 이동 확률이 낮음을 확인 가능.
@@ -253,7 +253,7 @@ plt.legend(labels=lable)
 plt.show()
 ```
 
-![age_img](../assets/img/for_post/Space_Titanic/age.png)
+![age_img](/assets/img/for_post/Space_Titanic/age.png)
 &nbsp;
 
 0 ~ 18세까지는 이동 확률이 높으며, 19 ~ 40세까지는 이동 확률이 낮은 것을 확인 가능함.
@@ -267,7 +267,7 @@ sns.countplot(data=train_df, x='Side', hue='Transported', ax=ax)
  
 plt.show()
 ```
-![vip_img](../assets/img/for_post/Space_Titanic/vip.png)
+![vip_img](/assets/img/for_post/Space_Titanic/vip.png)
 &nbsp;
 
 `VIP`의 경우 신청한 승객과 그렇지 않은 승객들 간의 이동 확률의 차이가 거의 없음을 확인할 수 있으며,  학습에 도움이 미미한 것으로 판단함. 
@@ -286,7 +286,7 @@ for i, columns in enumerate(num_list):
 
 plt.show()
 ```
-![service_img](../assets/img/for_post/Space_Titanic/service.png)
+![service_img](/assets/img/for_post/Space_Titanic/service.png)
 &nbsp;
 
 위 데이터들은 특이하게도 대부분이 0이며, 이는 소수의 승객들만이 유료 서비스를 이용했음을 나타냄.
@@ -394,6 +394,6 @@ Validation Accuracy: 0.90642
 
 ## **6. Review**   
 
-![score_img](../assets/img/for_post/Space_Titanic/score.png)
+![score_img](/assets/img/for_post/Space_Titanic/score.png)
 &nbsp;
 
