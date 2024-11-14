@@ -8,17 +8,21 @@ toc: true
 pin: true
 image:
   path: /assets/img/for_post/Space_Titanic/thumbnail.jpg
-  alt: image alternative text
+  alt: Spaceship Titanic Competition
 ---
 
  **[Kaggle] Space Ship Titanic 생존자 예측**
 
 ➔ [Kaggle Competition](https://www.kaggle.com/competitions/spaceship-titanic)
-&nbsp;
+>Welcome to the year 2912, where your data science skills are needed to solve a cosmic mystery. We've received a transmission from four lightyears away and things aren't looking good.
+>
+>The _Spaceship Titanic_ was an interstellar passenger liner launched a month ago. With almost 13,000 passengers on board, the vessel set out on its maiden voyage transporting emigrants from our solar system to three newly habitable exoplanets orbiting nearby stars.
+>
+>While rounding Alpha Centauri en route to its first destination—the torrid 55 Cancri E—the unwary _Spaceship Titanic_ collided with a spacetime anomaly hidden within a dust cloud. Sadly, it met a similar fate as its namesake from 1000 years before. Though the ship stayed intact, almost half of the passengers were transported to an alternate dimension!
 
-```null
-![poster](/assets/img/for_post/Space_Titanic/thumbnail.jpg)
-```
+&nbsp;
+Titanic 생존자 예측과 비슷한 문제로 우주선 탑승객이 다른 차원으로 이동 되었는지 아닌지 예측하는 모델을 만드는 문제임
+&nbsp;
 
 ## **1. Checking Data**   
    
@@ -40,6 +44,7 @@ image:
 &nbsp;
  * `Cabin`의 경우 3개의 Feature `deck`, `num`, `side`가 합쳐진 형태이므로 3개의 Columns으로 분리
  
+
  ####   Import Packages
    
 ```py
@@ -68,8 +73,9 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
 ```
-
- ####   Load Dataset
+   
+####   Load Dataset
+   
 ```py
 train_df = pd.read_csv("/kaggle/input/spaceship-titanic/train.csv")
 test_df = pd.read_csv("/kaggle/input/spaceship-titanic/test.csv")
@@ -78,7 +84,10 @@ test_df = pd.read_csv("/kaggle/input/spaceship-titanic/test.csv")
 
 ## **2. Feature Engineering**   
 
- ####   Split Cabin
+
+#### Split Cabin
+     
+     
 `Cabin`을 '/'를 기준으로 나눠서 `deck`, `num`, `side` 3개의 Feature로 분할
 
 ```py
@@ -139,6 +148,9 @@ sns.countplot(data=train_df, x='Transported', ax=ax[1])
  
 plt.show()
 ```
+
+![Transported_img](/assets/img/for_post/Space_Titanic/transported.png)
+
 항해 중 다른 차원으로 이동 된 사람들과 그렇지 않은 사람들의 비율이 비슷하다는 것을 확인 가능
 
 ####   2. HomePlanet
@@ -298,7 +310,7 @@ clf_xgb.fit(
 ```
 Validation Accuracy: 0.90573
 
-  ####   2. Hyperparameter optimization Using GridSearchCV
+####   2. Hyperparameter optimization Using GridSearchCV
 ```py
 param_grid={
     'max_depth': [3,4,5],
