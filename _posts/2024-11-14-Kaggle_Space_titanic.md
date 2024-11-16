@@ -21,7 +21,8 @@ image:
 >While rounding Alpha Centauri en route to its first destination—the torrid 55 Cancri E—the unwary _Spaceship Titanic_ collided with a spacetime anomaly hidden within a dust cloud. Sadly, it met a similar fate as its namesake from 1000 years before. Though the ship stayed intact, almost half of the passengers were transported to an alternate dimension!
 
 &nbsp;
-Titanic 생존자 예측과 비슷한 문제로 우주선 탑승객이 다른 차원으로 이동 되었는지 아닌지 예측하는 모델을 만드는 문제임
+Titanic 생존자 예측과 비슷한 문제로 우주선 탑승객이 다른 차원으로 이동 되었는지 아닌지 예측하는 모델을 만드는 문제입니다.
+
 &nbsp;
 
 ## **1. Checking Data**   
@@ -38,11 +39,12 @@ Titanic 생존자 예측과 비슷한 문제로 우주선 탑승객이 다른 �
 > `Name` - 승객의 이름   
 > `Transported` - 승객이 다른 차원으로 이동 되었는지 여부 (Target Data)
  
+####   Note
 
-
-* `PassingerId`의 경우 승객 고유의 값이지만 그룹 정보를 포함하고 있기 때문에 데이터와 Feature Engineering을 통해 가공해서 새로운 Feature(ex. 그룹 내 인원의 수)를 만들 수 있음 
+ * `PassingerId`의 경우 승객 고유의 값이기 때문에 직접적으로 학습에 활용하기에는 무리가 있으나 그룹 정보를 포함하고 있기 때문에 잘 정제해서 같은 그룹에 포함된 인원의 수와 같은 데이터로 가공한다면 활용 가능할 것이라고 생각하였습니다.
 &nbsp;
- * `Cabin`의 경우 3개의 Feature `deck`, `num`, `side`가 합쳐진 형태이므로 3개의 Columns으로 분리
+ * `Cabin`의 경우 3개의 Feature `deck`, `num`, `side`가 합쳐진 형태이므로 일단 분리해서 3개의 Columns으로 만들어 활용하는 것이 좋을 것 같습니다.
+
  
 
 ####   Import Packages
@@ -115,7 +117,7 @@ train_df.drop(['PassengerId', 'Name', 'Cabin', 'Group', 'PassengerNum'],axis=1,i
 test_df.drop(['Name', 'Cabin', 'Group', 'PassengerNum'],axis=1,inplace=True)
 ```
 ####   Handling Missing Value
-결측치 확인 후 중앙값과 최빈값으로 대체 
+결측치는 중앙값과 최빈값으로 채우겠습니다.
 ```py
 train_df.isnull().sum() 
 ```
@@ -152,7 +154,7 @@ plt.show()
 ![Transported_img](/assets/img/for_post/Space_Titanic/transported.png)
 &nbsp;
 
-항해 중 다른 차원으로 이동 된 사람들과 그렇지 않은 사람들의 비율이 비슷하다는 것을 확인 가능
+항해 중 다른 차원으로 이동 된 사람들과 그렇지 않은 사람들의 비율이 비슷하기 때문에 데이터의 샘플링은 불필요 할 것 같습니다.
 
 ####   2. HomePlanet
 ```py
@@ -171,7 +173,7 @@ train_df[['HomePlanet', 'Transported']].groupby(['HomePlanet'], as_index=False).
 ![homeplanet2_img](/assets/img/for_post/Space_Titanic/homeplanet2.png)
 &nbsp;
 
-지구, 유로파, 화성 순으로 탑승 승객이 많으며,  지구에서 탑승한 승객들이 다른 두 행성에서 탑승한 승객들보다 이동 확률이 낮음을 확인 가능함.
+지구, 유로파, 화성 순으로 탑승 승객이 많으며,  지구에서 탑승한 승객들이 다른 두 행성에서 탑승한 승객들보다 이동 확률이 낮음을 확인 가능합니다.
 
 ####   3. CryoSleep
 ```py
@@ -183,7 +185,7 @@ plt.show()
 ```
 ![cryosleep_img](/assets/img/for_post/Space_Titanic/cryosleep.png)
 &nbsp;
-`CryoSleep`의 경우 동면 중인 승객들이 그렇지 않은 승객들에 비해 유의미하게 이동 확률이 높은 것을 확인 가능함. 
+`CryoSleep`의 경우 동면 중인 승객들이 그렇지 않은 승객들에 비해 이동 확률이 높은 것을 확인 가능합니다. `CryoSleep`은 학습에  유의미하게 사용할 수 있겠습니다.
 
 ####   4. Cabin (Deck)
 ```py
@@ -202,7 +204,7 @@ train_df[['Deck', 'Transported']].groupby(['Deck'], as_index=False).mean().sort_
 ![deck2_img](/assets/img/for_post/Space_Titanic/deck2.png)
 &nbsp;
 
-각 `Cabin`에서 승객이 제대로 도착한 비율을 구해보면 다음과 같음. 객실 B와 C의 경우 승객의 이동 확률에 유의미한 차이가 있음을 확인 가능함. 
+각 `Cabin`에서 승객이 제대로 도착한 비율을 구해보면 다음과 같습니다. 객실 B와 C의 경우 승객의 이동 확률에 유의미한 차이가 있음을 확인 가능합니다. 
 
 ####   5. Cabin (Side)
 
@@ -222,7 +224,7 @@ train_df[['Side', 'Transported']].groupby(['Side'], as_index=False).mean().sort_
 ![side2_img](/assets/img/for_post/Space_Titanic/side2.png)
 &nbsp;
 
-`Side`의 경우 우현(S)에 앉은 승객들이 좌현(P)에 앉은 승객들보다 이동 확률이 높다는 것을 확인 가능함.
+`Side`의 경우 우현(S)에 앉은 승객들이 좌현(P)에 앉은 승객들보다 이동 확률이 높다는 것을 확인 가능합니다.
 
 ####   6. Destination
 ```py
@@ -241,7 +243,7 @@ train_df[['Destination', 'Transported']].groupby(['Destination'], as_index=False
 ![destination2_img](/assets/img/for_post/Space_Titanic/destination2.png)
 &nbsp;
 
-55 Cancri e가 목적지였던 승객들은 이동 확률이 높고 TRAPPIST-1e가 목적지인 승객은 이동 확률이 낮음을 확인 가능.
+55 Cancri e가 목적지였던 승객들은 이동 확률이 높고 TRAPPIST-1e가 목적지인 승객은 이동 확률이 낮음을 확인 가능합니다.
 
 ####   7. Age
 ```py
@@ -256,7 +258,7 @@ plt.show()
 ![age_img](/assets/img/for_post/Space_Titanic/age.png)
 &nbsp;
 
-0 ~ 18세까지는 이동 확률이 높으며, 19 ~ 40세까지는 이동 확률이 낮은 것을 확인 가능함.
+0 ~ 18세까지는 이동 확률이 높으며, 19 ~ 40세까지는 이동 확률이 낮은 것을 확인 가능합니다.
 
 ####   8. VIP
 
@@ -270,7 +272,7 @@ plt.show()
 ![vip_img](/assets/img/for_post/Space_Titanic/vip.png)
 &nbsp;
 
-`VIP`의 경우 신청한 승객과 그렇지 않은 승객들 간의 이동 확률의 차이가 거의 없음을 확인할 수 있으며,  학습에 도움이 미미한 것으로 판단함. 
+`VIP`의 경우 신청한 승객과 그렇지 않은 승객들 간의 이동 확률의 차이가 거의 없음을 확인할 수 있으며,  학습에 큰 영향을 주지 못할 것 같습니다. 
 
 ####   9. RoomService, FoodCourt, ShoppingMall, Spa,  VRDeck
 
@@ -289,7 +291,17 @@ plt.show()
 ![service_img](/assets/img/for_post/Space_Titanic/service.png)
 &nbsp;
 
-위 데이터들은 특이하게도 대부분이 0이며, 이는 소수의 승객들만이 유료 서비스를 이용했음을 나타냄.
+위 데이터들은 특이하게도 대부분이 0이며, 이는 소수의 승객들만이 유료 서비스를 이용했음을 나타냅니다.  그래프로 출력해 보았을 때 데이터 분포의 첨도가 매우 높음을 확인 가능합니다.
+
+####   10. Correlation matrix 
+```py
+plt.figure(figsize=(15,15))
+sns.heatmap(train_df.corr( ) , cmap='coolwarm', annot=True, fmt = '.2f')
+plt.show( )
+```
+![Correlation_img](/assets/img/for_post/Space_Titanic/correlation.png)
+&nbsp;
+`CryoSleep`이 Target과 강한 상관 관계를 가지고 있음을 확인 가능합니다.
 
 ## **4. Preprocessing**   
 
@@ -321,7 +333,7 @@ for i in label_list:
 
     test_df[i] = le.transform(test_df[i])
 ```
-모델이 인식할 수 있도록 object 형태의 Feature 들을 정수의 형태로 Label encoding 해줌.
+모델이 인식할 수 있도록 object 형태의 Feature 들을 정수의 형태로 Label encoding
 
 ####   3. Split Train & Test Data
 ```py
@@ -397,3 +409,8 @@ Validation Accuracy: 0.90642
 ![score_img](/assets/img/for_post/Space_Titanic/score.png)
 &nbsp;
 
+첫 Competitions이라 아직 EDA가 미숙해 데이터의 특성을 파악해도 어떤 가공을 해야 하는지 어떤 데이터를 drop 해야 하는지 어려웠지만 그만큼 배운 것도 많은 것 같습니다. 
+
+Submit 점수는 처음엔 낮았지만 `PassingerId`를 정제하여 `Group_size`를 새로 만드는 등의 수정을 통해서 점수가 많이 상승했습니다.
+
+이번 Competitions 통해서 제대로 된 Feature Engineering의 중요성을 확인한 것 같습니다!
