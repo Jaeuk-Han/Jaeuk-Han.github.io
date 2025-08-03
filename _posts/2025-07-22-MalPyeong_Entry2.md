@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #2: 1주차(2) - 평가 지표 정리 (수식+EM 포함)"
 date: 2025-07-22 21:00:00 +09:00
-categories: [AI, NLP, Competition]
+categories: [AI, NLP, 2025 말평]
 tags: [말평대회, RAG, HuggingFace, NLP, 평가지표, ExactMatch]
 toc: true
 pin: true
@@ -65,6 +65,7 @@ EM = \frac{1}{N} \sum_{i=1}^{N} \mathbf{1}[\hat{y}_i = y_i]
 $$
 
 - **대회 코드 예시**
+
 ```python
 def calc_exact_match(true_data, pred_data):
     correct = 0
@@ -97,6 +98,7 @@ $$
 - $\mathbf{h}_{y}$: 참조 문장 임베딩
 
 - **대회 코드 예시**
+
 ```python
 from bleurt import score
 
@@ -133,6 +135,7 @@ F_1 = 2 \cdot \frac{P \cdot R}{P + R}
 $$
 
 - **대회 코드 예시**
+
 ```python
 import evaluate
 bert_scorer = evaluate.load('bertscore')
@@ -163,6 +166,7 @@ ROUGE\text{-}1 = \frac{|\text{생성 문장 단어} \cap \text{참조 문장 단
 $$
 
 - **대회 코드 예시**
+
 ```python
 from rouge_metric import Rouge
 
