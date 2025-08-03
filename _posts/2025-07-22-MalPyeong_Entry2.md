@@ -1,5 +1,5 @@
 ---
-title: "[AI 말평 대회] 참여기 #2: 1주차(2) - 평가 지표 정리 (수식+EM 포함)"
+title: "[AI 말평 대회] 참여기 #2: 1주차(2) - 평가 지표 정리"
 date: 2025-07-22 21:00:00 +09:00
 categories: [AI, NLP, 2025 말평]
 tags: [말평대회, RAG, HuggingFace, NLP, 평가지표, ExactMatch]
@@ -18,14 +18,14 @@ image:
 **Exact Match(EM) + BLEURT + BERTScore + ROUGE-1**과  
 **공식 코드 핵심 부분 및 수식**까지 살펴보기로 결정하였다.
 
-공식 평가지표 코드는 GitHub에서 확인 가능하다.  
+대회 공식 평가지표 코드는 GitHub에서 확인 가능하다.  
 [평가 지표 코드 바로가기](https://github.com/teddysum/korean_evaluation/blob/main/evaluation.py#L373)
 
 ---
 
 ## 1. 대회 평가 흐름 요약
 
-말평 대회에서는 단순 정확도가 아닌 **문장 품질과 의미 유사도**를 반영한 평가를 진행한다.
+대회에서는 단순 정확도가 아닌 **문장 품질과 의미 유사도**를 반영한 평가를 진행한다.
 
 1. 제출 JSON과 정답 JSON의 ID를 매칭
 2. 문제 유형에 따라 다른 지표 사용
@@ -35,7 +35,7 @@ image:
 
 > 실제 대회 코드에서는 `evaluation_korean_contest_RAG_QA()` 함수로  
 > RAG 과제 점수를 계산하며,  
-> 정답 문장에서 **정답(Answer)**과 **이유(Reason)**를 분리해 각각 평가한다.
+> 정답 문장에서 **정답(Answer)**과 **이유(Reason)**를 분리해 각각 평가한다. ("가 올다."를 기준으로)
 
 ---
 
@@ -189,10 +189,42 @@ def calc_ROUGE_1(true, pred):
 
 ---
 
+### ROUGE 계열 확장
+
+**ROUGE-"1"** 이라는 이름에서 알 수 있듯이 ROUGE에는 여러 버전이 존재한다.
+ROUGE와 관련된 추가 함수에 대해 공부한 내용도 이곳에 정리하고자 한다.
+
+#### 1. ROUGE-N
+
+- **개념**: n-gram 단위 일치율
+- **예시**:  
+  - ROUGE-1 → 단어 단위  
+  - ROUGE-2 → 2-gram (연속 2단어)  
+  - ROUGE-3 → 3-gram
+- **수식**
+
+$$
+ROUGE\text{-}N = \frac{\sum_{g \in Ref} \min(Cand(g), Ref(g))}{\sum_{g \in Ref} Ref(g)}
+$$
+
+#### 2 ROUGE-L (Longest Common Subsequence)
+
+- **개념**: 두 문장의 **최장 공통 부분 수열(LCS)** 기반
+- **장점**: 단어 순서를 고려하면서도 일부 건너뛰기 허용
+- **활용**: 요약, 서술형 생성 품질 평가 가능
+
+#### 3. ROUGE-W (Weighted LCS)
+
+- **개념**: LCS 기반이지만 **연속된 일치 구간**에 가중치 부여
+- **활용**: 자연스러운 연속 생성 평가 가능
+
+---
+
 ## 3. 평가 함수 구조
 
 대회 평가 핵심 함수는 `evaluation_korean_contest_RAG_QA()`로,  
 정답과 예측 데이터를 받아 **정확도 + 생성 품질**을 모두 측정한다.
+코드가 굉장히 길기에 중요한 실행 과정만 요약해 보았다.
 
 ```python
 def evaluation_korean_contest_RAG_QA(true_data, pred_data):
@@ -215,12 +247,44 @@ def evaluation_korean_contest_RAG_QA(true_data, pred_data):
 
 ---
 
-## 4. 오늘 정리한 핵심
+## 4. 최종 점수 계산과 전략적 시사점
+
+### 4-1. 최종 점수 계산
+
+1. **Descriptive Average (서술형 품질 평균)**
+
+$$
+descriptive\_avg = \frac{BLEURT + BERTScore + ROUGE1}{3}
+$$
+
+2. **Final Score (최종 점수)**
+
+$$
+final\_score = \frac{EM + descriptive\_avg}{2}
+$$
+
+- EM의 비중이 절반을 차지하므로, **EM 확보가 성적에 가장 중요할 것 같다.**
+
+---
+
+### 4-2. EM 확보 전략
+
+- **EM은 정답 문장의 앞부분(“…이/가 옳다” 직전) 기준으로 채점**
+- 따라서 다음이 중요:
+  1. **정답 문장 앞부분을 정확히 재현**
+  2. **“이/가 옳다” 형식 준수**
+- BLEURT/BERTScore/ROUGE로 문장 품질을 높이는 것도 중요하지만,  
+  EM을 확보하지 못하면 최종 점수가 크게 낮아질 것이다.
+
+---
+
+## 5. 오늘 정리한 핵심
 
 1. **EM(Exact Match)** → 예측과 정답이 완전히 같을 때만 1점  
 2. **BLEURT** → 의미 중심 문장 품질 평가, 사람 평가와 유사  
 3. **BERTScore** → 임베딩 기반 의미 유사도, F1 스코어 활용  
 4. **ROUGE-1** → 단어 단위 일치율 기반, 빠르고 직관적  
+5. **최종 점수 계산식** → EM과 Descriptive Avg의 평균으로 산출
 
-> 다음 글에서는 **이 지표들을 실제로 활용해  
-> 베이스라인 모델 성능을 평가**해볼 예정이다.
+> 결론: **EM 확보가 최우선**, 품질 지표는 이를 뒷받침하는 역할
+
