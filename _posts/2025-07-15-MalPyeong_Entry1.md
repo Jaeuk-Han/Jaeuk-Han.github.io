@@ -1,5 +1,5 @@
 ---
-title: "[AI 말평 대회] 참여기 #1: 1주차 - 대회 소개와 목표"
+title: "[AI 말평 대회] 참여기 #1: 1주차(1) - 대회 소개와 목표"
 date: 2025-07-15 21:00:00 +09:00
 categories: [AI, NLP, 2025 말평]
 tags: [말평대회, RAG, HuggingFace, NLP, 참여기]
