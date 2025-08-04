@@ -1,8 +1,8 @@
 ---
 title: "[AI 말평 대회] 참여기 #3: 1주차(3) - 리더보드 분석과 후보 모델 탐색"
 date: 2025-07-22 22:00:00 +09:00
-categories: [AI, NLP, Competition]
-tags: [말평대회, RAG, HuggingFace, NLP, 모델탐색, 벤치마크]
+categories: [AI, NLP, 2025 말평]
+tags: [말평대회, RAG, HuggingFace, NLP, 모델탐색, Benchmark]
 toc: true
 pin: true
 image:
@@ -49,6 +49,7 @@ image:
 - **개요**: 일본어 `llm-jp-eval`을 한국어용으로 수정  
 - **목적**: 한국어 LLM의 **NLU 능력** 측정, 생성 기반 평가
 - **태스크 및 데이터셋**
+
   | Task | Dataset | Metric | 링크 |
   |------|--------|--------|------|
   | NLI | KorNLI, KoBEST HellaSwag, KoBEST COPA | exact | [KorNLI](https://huggingface.co/datasets/kakaobrain/kornli), [kobest](https://huggingface.co/datasets/kobest) |
