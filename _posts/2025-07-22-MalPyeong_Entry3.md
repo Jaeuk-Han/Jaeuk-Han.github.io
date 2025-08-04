@@ -48,7 +48,32 @@ image:
 
 - **개요**: 일본어 `llm-jp-eval`을 한국어용으로 수정  
 - **목적**: 한국어 LLM의 **NLU 능력** 측정, 생성 기반 평가
-- **태스크 및 데이터셋**
+
+#### 태스크별 설명
+
+1. **NLI (Natural Language Inference)**  
+   - 두 문장의 **논리적 관계**를 판별 (entailment/neutral/contradiction)  
+   - 데이터셋: KorNLI, KoBEST HellaSwag, KoBEST COPA  
+   - 모델의 **논리 추론 및 문장 관계 이해 능력** 측정
+2. **QA (Question Answering)**  
+   - 질문에 대한 **정확한 단답형/지식 기반 응답** 평가  
+   - 데이터셋: KoBEST WiC, KMMLU  
+   - 모델의 **질문 이해 및 정답 생성 능력** 평가
+3. **RC (Reading Comprehension)**  
+   - 문맥 독해 및 **문장 유사도 평가** (예: KorSTS)  
+   - 데이터셋: KorSTS, KoBEST SN  
+   - 모델의 **독해력·문장 의미 파악 능력** 측정
+4. **EL (Entity Linking)**  
+   - 문장에서 **개체명 식별 및 관계 추출** 수행  
+   - 데이터셋: KLUE-NER, KLUE-RE  
+   - 모델의 **개체 처리 및 관계 이해 능력** 평가
+5. **FA (Fundamental Analysis)**  
+   - **주어진 단어 조합으로 자연스러운 문장 생성**  
+   - 데이터셋: Korean-CommonGen  
+   - 모델의 **창의적 문장 생성 능력** 평가
+
+#### 태스크 및 데이터셋
+
 
   | Task | Dataset | Metric | 링크 |
   |------|--------|--------|------|
@@ -134,4 +159,4 @@ image:
 - **평가 지표(EM + BLEURT + BERTScore + ROUGE)**를 활용해 성능 확인
 - 이후 **성능 비교 및 최종 후보 모델 선정**
 
-> 다음 글에서는 **Baseline 추론 및 초기 점수**를 다룰 예정이다.
+> 다음 글에서는 **Baseline 추론**을 다룰 예정이다.
