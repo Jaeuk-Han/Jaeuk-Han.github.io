@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #3: 1주차(3) - 리더보드 분석과 후보 모델 탐색"
-date: 2025-07-22 22:00:00 +09:00
-categories: [AI, NLP, 2025 말평]
+date: 2025-07-11 22:00:00 +09:00
+categories: [2025_말평, NLP, AI]
 tags: [말평대회, RAG, HuggingFace, NLP, 모델탐색, Benchmark]
 toc: true
 pin: true

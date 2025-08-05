@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #4: 1주차(4) - 디코딩 파라미터와 추론 코드 분석"
-date: 2025-07-22 23:45:00 +09:00
-categories: [AI, NLP, 2025 말평]
+date: 2025-07-12 23:45:00 +09:00
+categories: [2025_말평, NLP, AI]
 tags: [말평대회, RAG, HuggingFace, NLP, Decoding, Inference, Quantization]
 toc: true
 pin: true

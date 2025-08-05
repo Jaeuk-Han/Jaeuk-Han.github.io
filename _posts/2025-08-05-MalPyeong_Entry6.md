@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #6: 2주차(1) - RAG 구조 & OMNI RAG & RAGChecker"
-date: 2025-07-27 22:30:00 +09:00
-categories: [AI, NLP, 2025 말평]
+date: 2025-07-15 22:30:00 +09:00
+categories: [2025_말평, NLP, AI]
 tags: [말평대회, RAG, OMNI-RAG, GraphRAG, TreeRAG, DPR, RAGChecker, LLM, Retrieval]
 toc: true
 pin: true
