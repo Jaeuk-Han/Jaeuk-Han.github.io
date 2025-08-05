@@ -1,7 +1,7 @@
 ﻿---
 title: "[Kaggle] Spaceship Titanic Competition"
 date: 2024-11-14 21:18:00 +09:00
-categories: [AI, Kaggle]
+categories: [DataScience, Kaggle]
 tags: [data analysis, ml, kaggle]
 math: true
 toc: true
