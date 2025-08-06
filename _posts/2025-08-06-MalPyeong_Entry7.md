@@ -176,9 +176,11 @@ graph LR
 - **정의:** 언어모델이 해당 문장을 예측할 때의 불확실성  
 - **공식:**
 
+$$
 \[
 PPL(W) = \exp\Big(-\frac{1}{N}\sum_{i=1}^{N}\log P(w_i | w_{<i})\Big)
 \]
+$$
 
 - **직관적 의미:**
   - PPL ↓ → 모델이 해당 문맥을 자연스럽게 이해 → 질문과 context 적합도 ↑  
@@ -204,9 +206,11 @@ PPL(W) = \exp\Big(-\frac{1}{N}\sum_{i=1}^{N}\log P(w_i | w_{<i})\Big)
 - **정의:** 정답 클래스의 log 확률을 최소화하는 손실  
 - **공식:**
 
+$$
 \[
 \mathcal{L}_{CE} = - \frac{1}{N} \sum_{i=1}^{N} y_i \log \hat{y}_i
 \]
+$$
 
 - 이번 프로젝트에서는
   - Gold = 1, Negatives = 4
