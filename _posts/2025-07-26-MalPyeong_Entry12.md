@@ -4,6 +4,7 @@ date: 2025-07-26 20:00:00 +09:00
 categories: [2025_말평, NLP, AI]
 tags: [말평대회, GRPO, RL, TRL, WandB, Evaluate, Submission]
 toc: true
+pin: true
 math: true
 image:
   path: /assets/img/for_post/MalPyeong/week3_wandb.png

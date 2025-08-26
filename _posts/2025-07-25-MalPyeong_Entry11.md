@@ -4,6 +4,7 @@ date: 2025-07-25 20:00:00 +09:00
 categories: [2025_말평, NLP, AI]
 tags: [말평대회, GRPO, RL, TRL, LoRA, InferenceCallback, ExactMatch, ROUGE, BERTScore]
 toc: true
+pin: true
 math: true
 image:
   path: /assets/img/for_post/MalPyeong/week3_rl_impl.png

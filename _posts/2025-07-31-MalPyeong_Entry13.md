@@ -4,6 +4,7 @@ date: 2025-07-31 20:00:00 +09:00
 categories: [2025_말평, NLP, AI]
 tags: [말평대회, 예선, 후기, 본선진출]
 toc: true
+pin: true
 math: false
 image:
   path: /assets/img/for_post/MalPyeong/prelim_rank.png
