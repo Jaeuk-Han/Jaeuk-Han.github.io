@@ -177,9 +177,7 @@ graph LR
 - **공식:**
 
 $$
-\[
 PPL(W) = \exp\Big(-\frac{1}{N}\sum_{i=1}^{N}\log P(w_i | w_{<i})\Big)
-\]
 $$
 
 - **직관적 의미:**
@@ -207,9 +205,7 @@ $$
 - **공식:**
 
 $$
-\[
 \mathcal{L}_{CE} = - \frac{1}{N} \sum_{i=1}^{N} y_i \log \hat{y}_i
-\]
 $$
 
 - 이번 프로젝트에서는
