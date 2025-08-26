@@ -88,7 +88,7 @@ print(f"Recall(top {top_n}): {recall:.2%}")
 
 > 유틸 함수(파일 로드/경로 체크)는 재사용성을 위해서 `utils.py`에 분리했다.
 
-> 👉 전체 구현 코드는 [GitHub repo](https://github.com/Jaeuk-Han/Korean_QA_RAG_2025)에서 확인할 수 있다.
+> 전체 구현 코드는 [GitHub repo](https://github.com/Jaeuk-Han/Korean_QA_RAG_2025)에서 확인할 수 있다.
 
 ---
 

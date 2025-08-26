@@ -107,13 +107,17 @@ tokenizer.save_pretrained(args.output_dir)
 
 출력된 메트릭은 `top_acc`로 Top-1 / Top-5 / 평균 순위를 기록했다.
 
+> 전체 구현 코드는 [GitHub repo](https://github.com/Jaeuk-Han/Korean_QA_RAG_2025)에서 확인할 수 있다.
+
 ---
 
-## ⚠️ 구조 불일치 문제: Query vs Context
+## 구조 불일치 문제: Query vs Context
 
 하지만 학습 성능은 기대보다 낮았다. 처음에는 코드 문제라고 생각해서 정말 열심히 점검을 하고 MNR(MultipleNegativesRanking) Loss나 Hard Negative Sampling 등을 적용해서 성능을 높이기 위해 노력했다.
 
 그래도 성능은 잘 나오지 않았다......
+
+![Face Palm...](/assets/img/for_post/MalPyeong/facepalm.png){: .w-70 .shadow .rounded}
 
 고민 끝에 같은 팀의 석사과정 팀원분에게 도움을 청했다.
 
