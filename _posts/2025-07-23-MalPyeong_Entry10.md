@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #10: 3주차(2) - GRPO 기반 강화학습과 DeepSeek의 사례"
 date: 2025-07-23 22:00:00 +09:00
-categories: [2025_말평, NLP, AI]
+categories: [2025_말평]
 tags: [말평대회, Reinforcement-Learning, GRPO, RLHF, RAG, DeepSeek, 강화학습]
 toc: true
 pin: true

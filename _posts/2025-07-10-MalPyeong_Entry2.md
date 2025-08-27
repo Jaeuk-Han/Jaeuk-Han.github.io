@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #2: 1주차(2) - 평가 지표 정리"
 date: 2025-07-10 21:00:00 +09:00
-categories: [2025_말평, NLP, AI]
+categories: [2025_말평]
 tags: [말평대회, RAG, HuggingFace, NLP, 평가지표, ExactMatch]
 toc: true
 pin: true

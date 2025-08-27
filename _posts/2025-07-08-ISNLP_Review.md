@@ -1,7 +1,7 @@
 ---
 title: "[ISNLP 오픈 튜토리얼] ISNLP 오픈 튜토리얼 수강 후기: NLP 입문기"
 date: 2025-07-08 22:00:00 +09:00
-categories: [ISNLP_Open_Tutorial, NLP]
+categories: [ISNLP_Open_Tutorial]
 tags: [NLP, 튜토리얼, 후기]
 toc: true
 pin: true

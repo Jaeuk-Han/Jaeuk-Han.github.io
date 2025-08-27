@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #13: 예선 후기 - 턱걸이지만 본선 진출!"
 date: 2025-07-31 20:00:00 +09:00
-categories: [2025_말평, NLP, AI]
+categories: [2025_말평]
 tags: [말평대회, 예선, 후기, 본선진출]
 toc: true
 pin: true

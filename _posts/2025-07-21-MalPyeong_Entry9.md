@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #9: 3주차(1) - 커스텀 듀얼 인코더 파인튜닝과 전략 전환"
 date: 2025-07-21 22:00:00 +09:00
-categories: [2025_말평, NLP, AI]
+categories: [2025_말평]
 tags: [말평대회, Retrieval, Dual-Encoder, LoRA, Quantization, MNR, CE-Loss, GRPO, RAG, Reinforcement-Learning]
 toc: true
 pin: true

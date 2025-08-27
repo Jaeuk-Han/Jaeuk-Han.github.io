@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #8: 2주차(3) - 듀얼 인코더(간편 버전) 구현과 실험"
 date: 2025-07-19 22:00:00 +09:00
-categories: [2025_말평, NLP, AI]
+categories: [2025_말평]
 tags: [말평대회, Retrieval, Dual-Encoder, Cross-Encoder, SentenceTransformers, RAG, SDE, ADE]
 toc: true
 pin: true

@@ -1,6 +1,6 @@
 ---
 title: "[한국 전통주 RAG] 1편: 프로젝트 시작 이야기"
-date: 2025-08-26 22:00:00 +09:00
+date: 2025-08-12 22:00:00 +09:00
 categories: [Project, KoreanSool_RAG]
 tags: [KoreanLiquor, RAG, Crawling, Dataset, AI]
 toc: true

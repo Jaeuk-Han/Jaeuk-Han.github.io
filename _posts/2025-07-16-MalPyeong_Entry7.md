@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #7: 2주차(2) - Retrieval 설계와 데이터 구조 정리"
 date: 2025-07-16 22:00:00 +09:00
-categories: [2025_말평, NLP, AI]
+categories: [2025_말평]
 tags: [말평대회, Retrieval, Dual-Encoder, Cross-Encoder, Reranker, RAG, LLM]
 toc: true
 pin: true
