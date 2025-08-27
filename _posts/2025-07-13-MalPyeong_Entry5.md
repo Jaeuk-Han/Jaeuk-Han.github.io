@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #5: 1주차(5) - 프롬프트 설계, CoT, 모델 성능 비교"
 date: 2025-07-13 22:30:00 +09:00
-categories: [2025_말평]
+categories: [2025_말평, 참여기]
 tags: [AI, NLP, Prompt engineering, CoT, RAG, LLM]
 toc: true
 pin: true

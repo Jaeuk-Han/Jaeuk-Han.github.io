@@ -1,7 +1,7 @@
 ---
 title: "[AI 말평 대회] 참여기 #12: 3주차(4) - GRPO 학습 결과와 제출 성적 공유"
 date: 2025-07-26 20:00:00 +09:00
-categories: [2025_말평]
+categories: [2025_말평, 참여기]
 tags: [말평대회, GRPO, RL, TRL, WandB, Evaluate, Submission]
 toc: true
 pin: true
