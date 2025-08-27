@@ -32,10 +32,6 @@ image:
 대회 이후 잠깐 쉬면서 유튜브를 보던 중, 평소에 자주 보던 **"술 익는 집"**님의 유튜브 채널에서 흥미로운 사이트를 접하게 됐다.  
 그 영상에서는 **한국술 고문헌 DB**라는 사이트를 소개하고 있었는데, 호기심에 접속해 보니 생전 처음 보는 술 이름과 레시피가 가득했다.  
 
-<figure>
-  <img src="/assets/img/for_post/KoreanSool_RAG/sool_house.png" alt="술 익는 집 스크린샷">
-  <figcaption>양조 전문 유튜버 "술 익는 집"님의 유튜브 채널</figcaption>
-</figure>
 
 그 순간 이런 생각이 번쩍 들었다.  
 
