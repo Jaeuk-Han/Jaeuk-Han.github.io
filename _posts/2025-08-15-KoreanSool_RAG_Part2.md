@@ -117,51 +117,51 @@ def derive_main_category(liq, hanja, source_categories):
 
 ```json
 {
-  "doc_id": "string", // 문서 고유 ID
-  "book": "string", // 고문헌 이름
-  "title": "string", // 항목 제목
-  "liq": "string", // 술 이름
-  "hanja": "string|null", // 한자 표기 (없으면 null)
-  "description": "string|null", // 짧은 설명
-  "main_category": "sool", // 주범주 (예: 'sool', 'nuruk', 'other')
-  "entry_type": "sool", // 엔트리 타입
-  "text": "string|null",  // 본문 텍스트
+  "doc_id": "string",
+  "book": "string",
+  "title": "string",
+  "liq": "string",
+  "hanja": "string|null",
+  "description": "string|null",
+  "main_category": "sool",
+  "entry_type": "sool",
+  "text": "string|null",
   "metadata": {
-    "layout": "string|null", // 원본 레이아웃 정보
+    "layout": "string|null",
     "page_title": "string|null",
     "order": "number|null",
-    "source_categories": ["string", "..."], // 원본 카테고리
-    "category_levels": { // 원본 카테고리 기준으로 계층 분류
+    "source_categories": ["string", "..."],
+    "category_levels": {
       "level1": "string",
       "level2": "string|null",
       "level3": "string|null",
       "level4": "string|null"
     },
-    "external_links": { // 관련 링크(키=라벨, 값=URL/상대경로)
+    "external_links": {
       "문헌 정보": "string",
       "상세 주방문": "string"
     },
-    "grid_headers": ["string", "..."], // 표&그리드의 컬럼명
-    "steps": [ // 제조 단계
+    "grid_headers": ["string", "..."],
+    "steps": [
       {
-        "단계": "string", // 예: 밑술, 덧술
+        "단계": "string",
         "일": "number|null",
         "발효": "string|boolean|null",
-        "멥쌀": "number|null", // 단위: 되/말 등 원데이터 기준
+        "멥쌀": "number|null",
         "찹쌀": "number|null",
         "물": "number|null",
-        "가공": "string|null", // 예: 죽, 고두밥
+        "가공": "string|null",
         "누룩": "number|null",
         "누룩형태": "string|null",
         "메모": "string|null",
-        "...": "..." // 기타 생략
+        "...": "..."
       }
     ],
-    "memo_free": "string|null", // 자유 메모
-    "original": "string", // 원문
-    "translation": "string", // 번역문(현대 한글)
-    "year_guess": "number|null", // 추정 연대
-    "is_beverage": "boolean" // 음료/비음료 플래그
+    "memo_free": "string|null",
+    "original": "string",
+    "translation": "string",
+    "year_guess": "number|null",
+    "is_beverage": "boolean"
   }
 }
 ```
