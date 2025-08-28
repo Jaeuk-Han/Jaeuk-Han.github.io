@@ -1,7 +1,7 @@
 ---
 title: "[한국 전통주 RAG] 3편: 데이터 전처리와 정리"
 date: 2025-08-18 22:00:00 +09:00
-categories: [Portfolio, NLP, RAG]
+categories: [Project, KoreanSool_RAG]
 tags: [KoreanLiquor, RAG, Preprocessing, Dataset, AI]
 toc: true
 pin: true
