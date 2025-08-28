@@ -5,6 +5,7 @@ categories: [Project, KoreanSool_RAG]
 tags: [KoreanLiquor, RAG, Retriever, BM25, MMR, CrossEncoder]
 toc: true
 pin: true
+math: true
 image:
   path: /assets/img/for_post/KoreanSool_RAG/retriever.png
   alt: "전통주 RAG 리트리버"
