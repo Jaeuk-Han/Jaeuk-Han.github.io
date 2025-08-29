@@ -107,8 +107,6 @@ def derive_main_category(liq, hanja, source_categories):
 
 이를 통해 메인 페이지에 있던 (술 2,876, 누룩 193, 기타 450) 카테고리에 해당하는 데이터들을 100%의 정확도로 성공적으로 분류할수 있었다.
 
-> 전체 크롤링 & 파싱 로직은 [GitHub repo](https://github.com/Jaeuk-Han/korean-traditional-liquor-dataset)에 정리해 두었다.
-
 ---
 
 ## 4. 결과 구조
@@ -175,6 +173,8 @@ def derive_main_category(liq, hanja, source_categories):
 - **크롤링 단계**: `crawler.py`로 셀렉트 박스를 순회하며 문헌별 HTML 저장  
 - **파싱 단계**: `parse_koreansool.py`로 1분류 카테고리 기반 분류 (`sool/nuruk/other`)  
 - **산출물**: 구조화된 JSON 데이터셋  
+
+> 전체 크롤링 & 파싱 로직은 [GitHub repo](https://github.com/Jaeuk-Han/korean-traditional-liquor-dataset)에 정리해 두었다.
 
 ---
 

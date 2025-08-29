@@ -156,7 +156,9 @@ def normalize_step_section(section: str) -> str:
 
 - `sool_preprocess.py` → 정규화 + 영문 라벨 추가 + 파생치 생성  
 - `sool_cleanup.py` → chunk 중복 제거 + 단계명 표준화 + 텍스트 분할  
-- Kaggle에 공개하여 **연구/교육용 데이터셋**으로 활용 가능  
+- Kaggle에 공개하여 다른 학생 & 개발자들이 **연구/교육용 데이터셋**으로 활용 가능  
+
+> 전체 전처리 로직은 [GitHub repo](https://github.com/Jaeuk-Han/korean-traditional-liquor-dataset)에 정리해 두었다.
 
 ---
 

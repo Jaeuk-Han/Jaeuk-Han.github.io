@@ -204,6 +204,8 @@ def build_demo(engine: RAGEngine, llm: LLM):
 - **Cross Encoder**: 최종 rerank (선택)  
 - **LLM + Gradio**: API 연결, 데모 완성  
 
+> 전체 데모 파일은 [GitHub repo](https://github.com/Jaeuk-Han/korean-traditional-liquor-dataset)에 정리해 두었다.
+
 ---
  
 다음 편에서는 이 파이프라인을 통해 **실제 추론 결과**를 확인하고, 어떤 한계와 개선점이 있었는지 기록해볼 예정이다.
