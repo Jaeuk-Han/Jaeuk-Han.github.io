@@ -25,14 +25,17 @@ image:
 마지막 단계에서는 Gradio 기반 데모를 제작하여 실제 질의응답을 확인했다.
 
 ![데모 전체 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo.png)
+*데모 스크린 샷*
 
 전체적인 모습은 위와 같으며, 옆쪽에는 리트리브 된 컨텍스트들을 확인 가능하다.
 
 ![데모 컨텍스트 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo_context.png)
+*컨텍스트 스크린 샷(백화주)*
 
 추가로 컨트롤 패널을 사용해 답변에 관련된 파라미터들을 제어 가능하게 구현했다.
 
 ![데모 패널 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo_panel.png)
+*컨트롤 패널 스크린 샷*
 
 이제 실제로 이번에 구현한 전통주 RAG 시스템의 답변을 살펴보겠다.
 
