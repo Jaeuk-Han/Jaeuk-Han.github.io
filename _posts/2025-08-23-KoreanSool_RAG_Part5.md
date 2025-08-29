@@ -49,14 +49,14 @@ image:
 
 ### (2) 재료·누룩 관련 질문
 
-![데모 재료 스크린샷](/assets/img/for_post/KoreanSool_RAG/Demo2.png)
+![데모 재료 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo2.png)
 
 **쿼리:** 누룩은 술 빚기에 어떤 역할을 해? 그리고 어떤 재료로 어떻게 만들어?  
 **답변:** 누룩은 술의 발효를 이끄는 핵심 발효제이며, 술맛과 품질에 큰 영향을 미친다. 주로 보리·밀·쌀로 만들며, 곡물을 씻어 반죽 후 적절한 온도에서 발효시켜 제작한다.
 
 누룩과 같이 양조 재료에 대한 개념도 잘 리트리브 되어 올바른 응답이 나온다.
 
-![데모 재료 스크린샷2](/assets/img/for_post/KoreanSool_RAG/Demo3.png)
+![데모 재료 스크린샷2](/assets/img/for_post/KoreanSool_RAG/demo3.png)
 
 **쿼리:** 꽃으로 만드는 술 몇종류 알려줘
 **답변:** 꽃으로 만드는 술의 종류로는 다음과 같은 것들이 있습니다:
@@ -71,7 +71,7 @@ image:
 
 ### (3) 리터 단위 질문
 
-![데모 단위 스크린샷](/assets/img/for_post/KoreanSool_RAG/Demo4.png)
+![데모 단위 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo4.png)
 
 **쿼리:** 경면녹파주를 만들 때 물은 총 몇 리터나 들어가?  
 **답변:** 경면녹파주에는 물이 총 5말, 즉 약 90리터가 들어간다.  
@@ -82,7 +82,7 @@ image:
 
 ### (4) 주류 외의 기타 요소 질문
 
-![데모 역사 스크린샷](/assets/img/for_post/KoreanSool_RAG/Demo5.png)
+![데모 역사 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo5.png)
 
 **쿼리:** 고려시대 군인들에게 술을 공급하던 관청은 뭐야?  
 **답변:** 고려시대 군인들에게 술을 공급하던 관청은 **별주색**이다.  
@@ -93,7 +93,7 @@ image:
 
 ### (5) 절차·단계 중심
 
-![데모 단계 스크린샷](/assets/img/for_post/KoreanSool_RAG/Demo6.png)
+![데모 단계 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo6.png)
 
 **쿼리:** 술을 빚은 다음에는 어떤 단계를 거쳐?  
 **답변:** 술을 빚은 뒤에는 누룩가루를 섞어 독에 담아 봉하고, 5~6일 뒤 익으면 물을 끓여 식혀 부은 후 하루 지난 뒤 삼태기로 걸러 맑은 술을 얻는다.
@@ -104,7 +104,7 @@ image:
 
 ### (6) 비교·한계 확인용
 
-![데모 한계 스크린샷](/assets/img/for_post/KoreanSool_RAG/Demo7.png)
+![데모 한계 스크린샷](/assets/img/for_post/KoreanSool_RAG/demo7.png)
 
 **쿼리:** 와인, 맥주와 비교했을 때 한국 전통주의 특징은?  
 **답변:** 한국 전통주는 누룩을 사용하는 독특한 발효 방식이 특징이며, 쌀을 주원료로 하여 도수가 높고, 술잔을 돌려 마시는 문화가 발달했다. 와인·맥주와는 다른 문화적 배경과 제조 방식을 가진다.  
