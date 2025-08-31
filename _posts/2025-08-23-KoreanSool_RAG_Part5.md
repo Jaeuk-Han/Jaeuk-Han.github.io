@@ -155,4 +155,6 @@ End-to-End RAG 파이프라인을 직접 구현하고, 실제 데모 시연으�
 
 앞으로는 이 경험을 확장해 더 정교한 리트리버, 도메인 특화 생성 모델, 그리고 서비스 배포까지 도전해보고 싶다.  
 
-> 전체 코드는 [GitHub repo](https://github.com/Jaeuk-Han/korean-traditional-liquor-dataset)에서 확인할 수 있다.  
+> 프로젝트에 사용된 데이터셋은 [Korean Traditional Liquor Dataset on Kaggle](https://www.kaggle.com/datasets/jaeukhan/korean-traditional-liquor-dataset)에서 다운 가능하다.
+
+> 전체 코드는 [GitHub repo](https://github.com/Jaeuk-Han/korean-traditional-liquor-dataset)에서 확인할 수 있다.
