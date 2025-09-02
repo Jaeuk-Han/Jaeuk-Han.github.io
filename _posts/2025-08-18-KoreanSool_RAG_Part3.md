@@ -108,9 +108,9 @@ derived = {
 Kaggle 공개 이후, 동일 데이터셋을 **Hugging Face Datasets**에도 배포했다.  
 연구자들이 `datasets` 라이브러리로 바로 불러오고, 버전/체크섬을 통해 **재현성**을 더 쉽게 확보할 수 있도록 구성했다.
 
-- 레포: https://huggingface.co/datasets/Jaeuk-Han/korean-traditional-liquor-dataset
-- 라이선스: **CC BY-NC-SA 2.0 (KR)** (원 출처 표기/비영리/동일조건)
-- Dataset Card에 **Sources**, **Changes Made**, **Reproducibility & Code**, **SHA-256 checksums**를 포함
+[Korean Traditional Liquor Dataset on Hugging Face](https://huggingface.co/datasets/Jaeuk-Han/korean-traditional-liquor-dataset)
+
+- 라이선스는 소스 사이트와 동일하게 **CC BY-NC-SA 2.0 (KR)** (원 출처 표기/비영리/동일조건)로 표시해뒀다.
 
 **Quick Start**
 ```python
