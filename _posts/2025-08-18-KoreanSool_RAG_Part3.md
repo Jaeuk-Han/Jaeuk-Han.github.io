@@ -103,6 +103,34 @@ derived = {
 
 ---
 
+## 업데이트: Hugging Face에도 공개 (2025-09-02)
+
+Kaggle 공개 이후, 동일 데이터셋을 **Hugging Face Datasets**에도 배포했다.  
+연구자들이 `datasets` 라이브러리로 바로 불러오고, 버전/체크섬을 통해 **재현성**을 더 쉽게 확보할 수 있도록 구성했다.
+
+- 레포: https://huggingface.co/datasets/Jaeuk-Han/korean-traditional-liquor-dataset
+- 라이선스: **CC BY-NC-SA 2.0 (KR)** (원 출처 표기/비영리/동일조건)
+- Dataset Card에 **Sources**, **Changes Made**, **Reproducibility & Code**, **SHA-256 checksums**를 포함
+
+**Quick Start**
+```python
+from datasets import load_dataset
+
+ds = load_dataset(
+    "Jaeuk-Han/korean-traditional-liquor-dataset",
+    data_files={
+        "chunks": "sool_chunks.jsonl",
+        "docs": ["sool_docs.parquet", "sool_docs.csv"],
+        "steps": ["sool_steps.parquet", "sool_steps.csv"],  # optional
+    }
+)
+
+chunks = ds["chunks"]
+docs = ds.get("docs")
+steps = ds.get("steps")
+
+---
+
 ## 4. 중복 chunk_id 문제
 
 Retrieval 테스트를 준비하던 중 문제 하나를 더 발견했다.
