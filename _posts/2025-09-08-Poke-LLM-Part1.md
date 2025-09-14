@@ -6,7 +6,7 @@ tags: [Pokemon, LLM, poke-env, ReinforcementLearning, RAG]
 toc: true
 pin: true
 image:
-  path: /assets/img/for_post/Poke-LLM/intro.png
+  path: /assets/img/for_post/poke_llm/intro.png
   alt: "Poke-LLM 프로젝트 시작"
 ---
 
