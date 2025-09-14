@@ -1,5 +1,5 @@
-  ---
-title: "[Poke-LLM] 1편: "LLM은 메리프의 꿈을 꾸는가?", LLM 포켓몬 트레이너 만들기 프로젝트 시작과 첫번째 테스트"
+---
+title: "[Poke-LLM] 1편: \"LLM은 메리프의 꿈을 꾸는가?\", LLM 포켓몬 트레이너 만들기 프로젝트 시작과 첫번째 테스트"
 date: 2025-09-08 22:00:00 +09:00
 categories: [Project, Poke-LLM]
 tags: [Pokemon, LLM, poke-env, ReinforcementLearning, RAG]
