@@ -1,11 +1,11 @@
 ---
 title: "[동아리 강의 후기] 1편, 선형회귀: 개념과 실습"
-date: 2024-05-29
+date: 2024-05-30 21:00:00 +09:00
 categories: [태광고등학교 동아리 강의, 후기]
 tags: [후기, 선형회귀, 최소제곱법, 경사하강법, sklearn, 강의]
 math: true
 toc: true
-pin: false
+pin: true
 image:
   path: /assets/img/for_post/club_lecture/cover1.png
   alt: club lecture linear regression
