@@ -146,8 +146,9 @@ pwa:
     # shares the same domain name as the current website.
     deny_paths:
           - "/favicon.ico"
-          - "/assets/img/favicons"
+          - "/favicon.svg"
           - "/site.webmanifest"
+          - "/assets/img/favicons"   # 폴더째 제외
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
