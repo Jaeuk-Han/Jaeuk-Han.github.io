@@ -178,3 +178,4 @@ if 'bmi' in X_test.columns:
 
 다음 시간에는 딥러닝 강의 후기를 정리 해보겠다.
 
+> 전체 강의자료와 실습 코드는 [GitHub repo](https://github.com/Jaeuk-Han/taekwang-ai-lectures-2024)에서 확인할 수 있다.
